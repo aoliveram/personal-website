@@ -1,0 +1,141 @@
+/* --- Estilos Globales y Tipografía --- */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* --- Encabezado --- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 20px;
+    margin-bottom: 30px;
+}
+
+.header-content {
+    flex-grow: 1;
+}
+
+h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 1.2em;
+    color: #555;
+    margin-top: 5px;
+}
+
+.profile-pic {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%; /* Círculo perfecto */
+    object-fit: cover; /* Asegura que la imagen no se deforme */
+    margin-left: 30px;
+    border: 3px solid #eee;
+}
+
+.social-links {
+    margin-top: 15px;
+}
+
+.social-links a {
+    font-size: 1.5em;
+    color: #555;
+    margin-right: 15px;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+
+/* --- Secciones Principales --- */
+main {
+    margin-top: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    font-size: 1.8em;
+    font-weight: 600;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.entry {
+    margin-bottom: 15px;
+}
+
+.entry h3 {
+    font-size: 1.1em;
+    font-weight: 600;
+    margin: 0;
+}
+
+.entry p {
+    margin: 5px 0 0 0;
+    color: #444;
+}
+
+/* --- Pie de Página --- */
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+    font-size: 0.9em;
+    color: #888;
+}
+
+/* --- Responsividad para Móviles --- */
+@media (max-width: 680px) {
+    header {
+        flex-direction: column-reverse; /* Pone la foto arriba del texto */
+        text-align: center;
+    }
+
+    .profile-pic {
+        margin: 0 0 20px 0; /* Quita el margen izquierdo y añade abajo */
+    }
+    
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+}
