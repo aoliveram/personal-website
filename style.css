@@ -1,108 +1,80 @@
-/* --- Configuración Global y Fondo --- */
-html {
-    height: 100%;
-}
-
 body {
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: #ffffff; /* Texto blanco para que contraste con el fondo */
-    margin: 0;
-    height: 100%;
-    
-    /* El truco para la imagen de fondo */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/background.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed; /* La imagen se queda quieta al hacer scroll */
-    
-    display: flex; /* Usamos flexbox para alinear el contenido */
-    align-items: center; /* Centra el contenido verticalmente */
+  font-family:  Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
 }
 
-/* --- Contenedor del Texto Principal --- */
-.content-wrapper {
-    max-width: 700px;
-    padding: 40px;
-    margin: 0 40px; /* Margen para que no se pegue a los bordes */
+header {
+  color: rgb(300,300,300);
+  text-align:center;
+  text-shadow: 2px 2px 2px #9c9c9c;
+  font-weight: bold;
+  font-size:20pt;
+  padding: 2px;
+  background-position:left;
+  background-repeat:no-repeat;
 }
 
-/* --- Tipografía --- */
-h1 {
-    font-size: 3.5em; /* Más grande */
-    font-weight: 600;
-    margin: 0;
-    line-height: 1.1;
+footer {
+  background-color:white;
+  color:rgb(150,150,150);
+  font-size:10pt;
+  padding: 5px;
+  padding-bottom: 10px;
+  text-align: center;
+  border-top-style: solid;
+  border-top-color:rgb(200,200,200);
+  border-top-width: 4px;
 }
 
-.subtitle {
-    font-size: 1.5em;
-    font-weight: 300; /* Más liviano */
-    color: rgba(255, 255, 255, 0.85);
-    margin-top: 10px;
+/* Some general settings */
+b {color:#1e1e1e;}
+strong {color:#787878}
+
+nav {
+  line-height:30px;
+  background-color:gray;
+  height:30px;
+  color:white;
+  text-align:center;
+  border-radius: 50px;
+  box-shadow: 0 2px 1px #9c9c9c;
+  word-spacing: 30px;
 }
 
+section {
+  text-align: justify;
+  padding:10px;
+}
+
+pre {
+  background-color:rgb(194, 209, 224);
+  padding: inherit;
+  border-radius: 5px;
+  width: 90%;
+  margin: auto;
+  box-shadow: 0 2px 1px #9c9c9c;
+}
+
+/* Links style */
 a {
-    color: #87cefa; /* Un azul claro que resalta en fondo oscuro */
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.2s;
+  text-decoration: none;
+  font-weight: bolder;
+  color: Teal;
 }
 
-a:hover {
-    color: #ffffff;
-}
+nav a:link {color: white;text-decoration: none}
+nav a:visited {color: white;text-decoration: none}
+nav a:hover, a:hover {color: white; text-shadow: 0 2px 1px black;text-decoration: none}
+nav a:active {color: black;text-decoration: none}
 
-/* --- Iconos Sociales --- */
-.social-links {
-    margin-top: 25px;
-    margin-bottom: 40px;
-}
+/* Header style */
+h2 {color:#1e1e1e; font-weight:lighter;}
+h3 {color:#1e1e1e; font-weight:lighter;}
+h4 {color:#1e1e1e; font-weight:lighter;}
 
-.social-links a {
-    font-size: 2.2em; /* Iconos más grandes */
-    color: rgba(255, 255, 255, 0.7);
-    margin-right: 25px;
-}
-
-.social-links a:hover {
-    color: #ffffff;
-}
-
-/* --- Secciones --- */
-h2 {
-    font-size: 1em;
-    font-weight: 600;
-    text-transform: uppercase; /* MAYÚSCULAS */
-    letter-spacing: 1px;
-    color: rgba(255, 255, 255, 0.7);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    padding-bottom: 8px;
-    margin-bottom: 15px;
-}
-
-.entry h3 {
-    font-size: 1.1em;
-    font-weight: 600;
-    margin: 0;
-}
-
-.entry p {
-    margin: 5px 0 15px 0;
-    color: rgba(255, 255, 255, 0.85);
-}
-
-/* --- Enlaces Fijos del Pie de Página --- */
-.footer-links {
-    position: fixed; /* Esto lo saca del flujo normal y lo fija en la pantalla */
-    bottom: 30px;
-    right: 40px;
-    text-align: right;
-    font-size: 0.9em;
-    color: rgba(255, 255, 255, 0.7);
-    line-height: 1.5;
-}
-
-.footer-links a {
-    color: #ffffff;
-    font-weight: 600;
+img {
+  display: block;
+  width: auto;
+  max-width: 80%;
+  margin: auto;
+  padding: 10px;
 }

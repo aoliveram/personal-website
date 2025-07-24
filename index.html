@@ -1,55 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aníbal Olivera Morales - Personal Page</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <title>Aníbal Olivera Morales</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="Aníbal Olivera Morales, Ph.D. Student in Social Complexity Science.">
+  <meta name="keywords" content="social complexity, anibal olivera, physics, netdiffuseR, agent-based models, social networks">
+  <meta name="author" content="Aníbal Olivera Morales">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  
+  <!-- Estilos y librerías que usa la plantilla original -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <script src="https://kit.fontawesome.com/f1f87a298c.js" crossorigin="anonymous"></script>
+
+  <!-- Pequeños estilos internos de la plantilla original -->
+  <style>
+  .bio {
+    max-width: 550px;
+    padding-left: 5%;
+  } 
+  </style>
+
 </head>
-<body>
 
-    <!-- El contenido principal de la izquierda -->
-    <div class="content-wrapper">
-        <header>
-            <h1>Aníbal Luciano Olivera Morales</h1>
-            <p class="subtitle">Ph.D. Student in Social Complexity Science</p>
-            <div class="social-links">
-                <a href="mailto:anibal.olivera.m@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-                <a href="https://scholar.google.com/citations?user=ryxzohUAAAAJ&hl=es" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
-                <a href="https://orcid.org/0009-0000-3736-7939" target="_blank" title="ORCID"><i class="fab fa-orcid"></i></a>
-                <a href="https://github.com/aoliveram" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-            </div>
-        </header>
+<!-- ¡IMPORTANTE! Aquí debes poner el nombre de TU imagen de fondo -->
+<body style="font-family: 'Jost';background-image:url('assets/background.jpeg');background-size:cover;background-repeat:no-repeat;background-attachment:fixed;background-position-x:center;background-position-y:top;">
 
-        <main>
-            <section id="about">
-                <h2>About Me</h2>
-                <p>
-                    I am a Ph.D. student at the Research Center for Social Complexity (CICS) at Universidad del Desarrollo. My research focuses on social contagion and diffusion processes within networks, using agent-based models and statistical analysis. With a background in Physics from Universidad de Concepción, I am passionate about applying quantitative methods to understand complex social phenomena.
-                </p>
-            </section>
-            
-            <section id="publications">
-                <h2>Recent Publications</h2>
-                <div class="entry">
-                    <h3>The netdiffuseR R package: Analysis of Diffusion and Contagion Processes on Networks</h3>
-                    <p>Vega Yon, G., Valente, T., Olivera, A. (2024). Journal of Open Source Software. [Under Review]</p>
-                </div>
-                <div class="entry">
-                    <h3>Dipole-dipole interactions through a lens</h3>
-                    <p>Olivera, A., Sinha, K., Solano, P. (2022). Phys. Rev. A 106, 013703. <a href="https://doi.org/10.1103/PhysRevA.106.013703" target="_blank">[DOI]</a></p>
-                </div>
-            </section>
-        </main>
+<div class="container-fluid">
+  <div class="row" style="min-height:-webkit-fill-available;">
+
+    <div class="container-fluid text-left align-content-left overflow-hidden" style="background-image:linear-gradient(to right, rgba(40, 40, 40, .2), transparent, transparent);padding-top: 10px; padding-bottom: 50px;">
+      
+      <!-- ======================================================= -->
+      <!-- ==============    AQUÍ ESTÁN TUS DATOS    ============== -->
+      <!-- ======================================================= -->
+
+      <h2 class="bio">Aníbal Luciano Olivera Morales</h2>
+      <h4 class="bio" style="color: rgba(40, 40, 40, 1);font-weight:500;">Ph.D. Student in<br>Social Complexity Science</h4>
+      
+      <!-- TUS REDES SOCIALES -->
+      <p class="bio">
+        <a data-toggle="popover" data-trigger="hover" data-content="My Google Scholar Profile" href="https://scholar.google.com/citations?user=ryxzohUAAAAJ&hl=es" target="_blank"><i class="fas fa-graduation-cap fa-3x"> </i></a>
+        <a data-toggle="popover" data-trigger="hover" data-content="My ORCID profile" href="https://orcid.org/0009-0000-3736-7939" target="_blank"><i class="fab fa-orcid fa-3x"> </i></a>
+        <a data-toggle="popover" data-trigger="hover" data-content="Checkout my code on GitHub" href="https://github.com/aoliveram" target="_blank"><i class="fab fa-github fa-3x"> </i></a>
+      </p>
+
+      <!-- TU BIOGRAFÍA -->
+      <p class="bio">
+      I am a Ph.D. student at the Research Center for Social Complexity (CICS) at Universidad del Desarrollo. My research focuses on social contagion and diffusion processes within networks, using agent-based models and statistical analysis. With a background in Physics from Universidad de Concepción, I am passionate about applying quantitative methods to understand complex social phenomena.
+      </p>
+      
+      <!-- TU SECCIÓN DE PUBLICACIONES -->
+      <p class="bio">
+        My most recent works include "<a href="https://doi.org/10.1103/PhysRevA.106.013703" target="_blank">Dipole-dipole interactions through a lens</a>" published in Physical Review A, and the ongoing development of the R package "<a href="https://github.com/USCCANA/netdiffuseR" target="_blank">netdiffuseR</a>" for analyzing diffusion processes on networks.
+      </p>
+
     </div>
 
-    <!-- Enlaces que se quedarán fijos en la esquina inferior derecha -->
-    <div class="footer-links">
-        Contact me at <a href="mailto:anibal.olivera.m@gmail.com">anibal.olivera.m@gmail.com</a>
-        <br>
-        Latest CV <a href="assets/CV_Aníbal_Olivera_2025-07_ENG.pdf" target="_blank">here</a>.
+    <!-- ENLACES DEL PIE DE PÁGINA -->
+    <div style="text-align: right;filter:grayscale(1);padding-bottom: 10px;padding-right: 10px;" class="container-fluid pr-2 pb-2 overflow-hidden">
+      Contact me at <a href="mailto:anibal.olivera.m@gmail.com">anibal.olivera.m@gmail.com</a><br>
+      Latest CV <a href="assets/CV_Aníbal_Olivera_2025-07_ENG.pdf" target="_blank"><i class="fas fa-id-badge"> </i> here.</a>
     </div>
+
+  </div>
+</div>
+
+<!-- Script para activar los popovers de los íconos -->
+<script>
+$(document).ready(function(){
+  $('[data-toggle="popover"]').popover();   
+});
+</script>
 
 </body>
 </html>
