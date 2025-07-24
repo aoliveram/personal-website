@@ -28,13 +28,35 @@
 </head>
 
 <!-- ¡IMPORTANTE! Aquí debes poner el nombre de TU imagen de fondo -->
-<body style="font-family: 'Jost'; background-image:url('assets/aoliveram_background.jpeg'); background-color: #4A4A4A; background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center center;">
+<body style="
+  font-family: 'Jost';
+  
+  /* --- ESTILOS PARA EL FONDO COMPLEJO --- */
+  
+  /* Color de respaldo por si fallan las imágenes */
+  background-color: #C8A97E; 
+
+  /* 1. La imagen (capa de arriba) y 2. El degradado (capa de abajo) */
+  background-image: url('assets/aoliveram_background.jpeg'), linear-gradient(to right, #C8A97E, #A08055);
+  
+  /* Posición: La imagen a la derecha, el degradado a la izquierda */
+  background-position: right center, left top;
+
+  /* Tamaño: La imagen ocupa el alto de la pantalla, el degradado la mitad del ancho */
+  background-size: auto 100vh, 50% 100%;
+
+  /* Evitar que se repitan */
+  background-repeat: no-repeat;
+
+  /* Fijar la imagen para que no se mueva con el scroll */
+  background-attachment: fixed;
+">
 
 </body>
 <div class="container-fluid">
   <div class="row" style="min-height:-webkit-fill-available;">
 
-    <div class="container-fluid text-left align-content-left overflow-hidden" style="background-image:linear-gradient(to right, rgba(40, 40, 40, .2), transparent, transparent);padding-top: 10px; padding-bottom: 50px;">
+    <div class="container-fluid text-left align-content-left overflow-hidden" style="background-image:linear-gradient(to right, rgba(40, 40, 40, .2), transparent, transparent); padding-top: 15vh; padding-bottom: 50px;">
       
       <!-- ======================================================= -->
       <!-- ==============    AQUÍ ESTÁN TUS DATOS    ============== -->
