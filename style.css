@@ -1,101 +1,82 @@
-/* --- Estilos Globales y Tipografía --- */
+/* --- Configuración Global y Fondo --- */
+html {
+    height: 100%;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    line-height: 1.6;
-    background-color: #f9f9f9;
-    color: #333;
+    color: #ffffff; /* Texto blanco para que contraste con el fondo */
     margin: 0;
-    padding: 20px;
+    height: 100%;
+    
+    /* El truco para la imagen de fondo */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('assets/background.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed; /* La imagen se queda quieta al hacer scroll */
+    
+    display: flex; /* Usamos flexbox para alinear el contenido */
+    align-items: center; /* Centra el contenido verticalmente */
 }
 
-.container {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px 40px;
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+/* --- Contenedor del Texto Principal --- */
+.content-wrapper {
+    max-width: 700px;
+    padding: 40px;
+    margin: 0 40px; /* Margen para que no se pegue a los bordes */
 }
 
-a {
-    color: #007bff;
-    text-decoration: none;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-/* --- Encabezado --- */
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #eee;
-    padding-bottom: 20px;
-    margin-bottom: 30px;
-}
-
-.header-content {
-    flex-grow: 1;
-}
-
+/* --- Tipografía --- */
 h1 {
-    font-size: 2.5em;
-    margin: 0;
+    font-size: 3.5em; /* Más grande */
     font-weight: 600;
+    margin: 0;
+    line-height: 1.1;
 }
 
 .subtitle {
-    font-size: 1.2em;
-    color: #555;
-    margin-top: 5px;
-}
-
-.profile-pic {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%; /* Círculo perfecto */
-    object-fit: cover; /* Asegura que la imagen no se deforme */
-    margin-left: 30px;
-    border: 3px solid #eee;
-}
-
-.social-links {
-    margin-top: 15px;
-}
-
-.social-links a {
     font-size: 1.5em;
-    color: #555;
-    margin-right: 15px;
+    font-weight: 300; /* Más liviano */
+    color: rgba(255, 255, 255, 0.85);
+    margin-top: 10px;
+}
+
+a {
+    color: #87cefa; /* Un azul claro que resalta en fondo oscuro */
     text-decoration: none;
+    font-weight: 500;
     transition: color 0.2s;
 }
 
+a:hover {
+    color: #ffffff;
+}
+
+/* --- Iconos Sociales --- */
+.social-links {
+    margin-top: 25px;
+    margin-bottom: 40px;
+}
+
+.social-links a {
+    font-size: 2.2em; /* Iconos más grandes */
+    color: rgba(255, 255, 255, 0.7);
+    margin-right: 25px;
+}
+
 .social-links a:hover {
-    color: #007bff;
+    color: #ffffff;
 }
 
-/* --- Secciones Principales --- */
-main {
-    margin-top: 20px;
-}
-
-section {
-    margin-bottom: 30px;
-}
-
+/* --- Secciones --- */
 h2 {
-    font-size: 1.8em;
+    font-size: 1em;
     font-weight: 600;
-    border-bottom: 2px solid #007bff;
-    padding-bottom: 5px;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-.entry {
+    text-transform: uppercase; /* MAYÚSCULAS */
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.7);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    padding-bottom: 8px;
     margin-bottom: 15px;
 }
 
@@ -106,36 +87,22 @@ h2 {
 }
 
 .entry p {
-    margin: 5px 0 0 0;
-    color: #444;
+    margin: 5px 0 15px 0;
+    color: rgba(255, 255, 255, 0.85);
 }
 
-/* --- Pie de Página --- */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid #eee;
+/* --- Enlaces Fijos del Pie de Página --- */
+.footer-links {
+    position: fixed; /* Esto lo saca del flujo normal y lo fija en la pantalla */
+    bottom: 30px;
+    right: 40px;
+    text-align: right;
     font-size: 0.9em;
-    color: #888;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
 }
 
-/* --- Responsividad para Móviles --- */
-@media (max-width: 680px) {
-    header {
-        flex-direction: column-reverse; /* Pone la foto arriba del texto */
-        text-align: center;
-    }
-
-    .profile-pic {
-        margin: 0 0 20px 0; /* Quita el margen izquierdo y añade abajo */
-    }
-    
-    .container {
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
+.footer-links a {
+    color: #ffffff;
+    font-weight: 600;
 }
