@@ -1,15 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>Aníbal Olivera Morales</title>
+  <!-- ======================================================= -->
+  <!-- ==============         CONFIGURACIÓN          ========= -->
+  <!-- ======================================================= -->
+
+  <!-- Título que aparece en la pestaña del navegador -->
+  <title>Aníbal Olivera M.</title>
+
+  <!-- Enlace a tu hoja de estilos. Asegúrate que el archivo 'style.css' esté en la misma carpeta. -->
   <link rel="stylesheet" href="style.css">
+
   <meta charset="UTF-8">
-  <meta name="description" content="Aníbal Olivera Morales, Ph.D. Student in Social Complexity Science.">
-  <meta name="keywords" content="social complexity, anibal olivera, physics, netdiffuseR, agent-based models, social networks">
+  <!-- Descripción de tu página para buscadores (Google, etc.) -->
+  <meta name="description" content="Aníbal Luciano Olivera Morales, Ph.D. Student in Social Complexity Science.">
+  <!-- Palabras clave para buscadores -->
+  <meta name="keywords" content="social complexity, anibal olivera, physics, netdiffuseR, agent-based models, social networks, udec, cics, sunbelt, complex contagion">
   <meta name="author" content="Aníbal Olivera Morales">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   
-  <!-- Estilos y librerías que usa la plantilla original -->
+  <!-- Librerías externas que dan funcionalidades y estilos base (Bootstrap, jQuery, FontAwesome para los iconos) -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
   <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -17,83 +27,90 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
   <script src="https://kit.fontawesome.com/f1f87a298c.js" crossorigin="anonymous"></script>
 
-  <!-- Pequeños estilos internos de la plantilla original -->
-  <style>
-  .bio {
-    max-width: 550px;
-    padding-left: 5%;
-  } 
-  </style>
-
 </head>
 
-<!-- ¡IMPORTANTE! Aquí debes poner el nombre de TU imagen de fondo -->
 <body style="
+  /* --- AJUSTES DEL FONDO DE PÁGINA --- */
+  /* Aquí puedes cambiar el tipo de letra principal */
   font-family: 'Jost';
   
-  /* --- ESTILOS PARA EL FONDO COMPLEJO --- */
-  
-  /* Color de respaldo por si fallan las imágenes */
-  background-color: #C8A97E; 
+  /* Color que se verá si la imagen o el degradado fallan */
+  background-color: rgb(204, 0, 0); 
 
-  /* 1. La imagen (capa de arriba) y 2. El degradado (capa de abajo) */
-  background-image: url('assets/aoliveram_background.jpeg'), linear-gradient(to right, #C8A97E, #A08055);
+  /* Define las capas del fondo. La primera es tu foto, la segunda es el degradado. */
+  background-image: url('assets/aoliveram_background.jpeg'), linear-gradient(to right, #a8a7a7, #e2e2e2);
   
-  /* Posición: La imagen a la derecha, el degradado a la izquierda */
+  /* Posiciona cada capa del fondo: tu foto a la derecha, el degradado a la izquierda. */
   background-position: right center, left top;
 
-  /* Tamaño: La imagen ocupa el alto de la pantalla, el degradado la mitad del ancho */
-  background-size: auto 100vh, 50% 100%;
+  /* Tamaño de cada capa: la foto ocupa el 100% del alto (100vh) y el degradado el 50% del ancho. */
+  /* AJUSTA AQUÍ: Cambia '50%' si quieres que el degradado sea más ancho o más estrecho. */
+  background-size: 50% auto, 50% 100%;
 
-  /* Evitar que se repitan */
+  /* Evita que los fondos se repitan. */
   background-repeat: no-repeat;
 
-  /* Fijar la imagen para que no se mueva con el scroll */
+  /* Fija el fondo para que no se mueva al hacer scroll. */
   background-attachment: fixed;
 ">
 
-</body>
+<!-- ======================================================= -->
+<!-- ==============      LA RED EN LA ESQUINA       ========= -->
+<!-- ======================================================= -->
+<!-- Este bloque posiciona la red. Cambia 'assets/ukfaculty.svg' si usas otra imagen. -->
+<div class="network-container">
+  <img src="assets/ukfaculty.svg" class="network-svg">
+</div>
+
 <div class="container-fluid">
   <div class="row" style="min-height:-webkit-fill-available;">
 
-    <div class="container-fluid text-left align-content-left overflow-hidden" style="background-image:linear-gradient(to right, rgba(40, 40, 40, .2), transparent, transparent); padding-top: 15vh; padding-bottom: 50px;">
+    <!-- Contenedor principal de tu biografía y datos -->
+    <!-- AJUSTA AQUÍ: Cambia 'padding-top: 20vh' a un valor mayor o menor para mover el bloque de texto hacia abajo o arriba. -->
+    <div class="container-fluid text-left align-content-left overflow-hidden" style="padding-top: 20vh; padding-bottom: 50px;">
       
       <!-- ======================================================= -->
-      <!-- ==============    AQUÍ ESTÁN TUS DATOS    ============== -->
+      <!-- ==============     TU NOMBRE Y TÍTULO      ============== -->
       <!-- ======================================================= -->
-
-      <h2 class="bio">Aníbal Olivera Morales</h2>
-      <h4 class="bio" style="color: rgba(40, 40, 40, 1);font-weight:500;">Ph.D. Student in<br>Social Complexity Science</h4>
+      <h2 class="bio">Aníbal Olivera Morales</h2> <br>
+      <h4 class="bio" style="color: rgba(40, 40, 40, 1);font-weight:1000;">Ph.D(c) in Social Complexity Sciences</h4> <br>
       
-      <!-- TUS REDES SOCIALES -->
+      <!-- ======================================================= -->
+      <!-- ==============    TUS REDES SOCIALES     ============== -->
+      <!-- ======================================================= -->
+      <!-- Para añadir un nuevo icono, copia una de las líneas <a>...</a> y cambia el link (href) y el icono (la clase 'fa-...') -->
       <p class="bio">
         <a data-toggle="popover" data-trigger="hover" data-content="Checkout my code on GitHub" href="https://github.com/aoliveram" target="_blank"><i class="fab fa-github fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My ORCID profile" href="https://orcid.org/0009-0000-3736-7939" target="_blank"><i class="fab fa-orcid fa-3x"> </i></a>
         <a data-toggle="popover" data-trigger="hover" data-content="My Google Scholar Profile" href="https://scholar.google.com/citations?user=ryxzohUAAAAJ&hl=es" target="_blank"><i class="fas fa-graduation-cap fa-3x"> </i></a>
+        <a data-toggle="popover" data-trigger="hover" data-content="My presentations" href="https://github.com/aoliveram/Presentations" target="_blank"><i class="fas fa-chalkboard-teacher fa-3x"> </i></a>
       </p>
+      <br>
 
-      <!-- TU BIOGRAFÍA -->
+      <!-- ======================================================= -->
+      <!-- ==============         BIOGRAFÍA         ============== -->
+      <!-- ======================================================= -->
       <p class="bio">
-      I am a Ph.D. student at the Research Center for Social Complexity (CICS) at Universidad del Desarrollo. My research focuses on social contagion and diffusion processes within networks, using agent-based models and statistical analysis. With a background in Physics from Universidad de Concepción, I am passionate about applying quantitative methods to understand complex social phenomena.
+        I am a Ph.D student at the <a href="https://gobierno.udd.cl/doctorado/" target="_blank">Research Center for Social Complexity</a> (CICS), where my research focuses on social contagion and diffusion processes within networks using advanced quantitative methods. Drawing from a background in Physics (Bs. 2020, Ms. c. 2022, at <a href="https://www.cfm.cl" target="_blank">UdeC</a>), my expertise extends to various domains, including works in <a href="https://doi.org/10.1103/PhysRevA.106.013703" target="_blank">theoretical physics</a> and applications in <a href="https://drive.google.com/file/d/10s43WsqoXXCqOwgC92tH1ddXDe76xal0/view" target="_blank">epidemiology</a>, alongside a strong emphasis on developing Social Network Analysis tools, such as co-authoring the R package <a href="https://cran.r-project.org/web/packages/netdiffuseR/index.html" target="_blank">netdiffuseR</a> and have co-led <a href="https://github.com/USCCANA/netdiffuser-workshop" target="_blank">workshops</a> on its application.
+      </p>
+      <p class="bio">
+        My primary interest lies in leveraging these computational and statistical approaches to illuminate complex social dynamics, a focus clearly reflected in my contributions to FONDECYT-funded projects on <a href="https://github.com/aoliveram/Proyecto-Carceles-Ising" target="_blank">prison populations</a> and <a href="https://github.com/aoliveram/Convencion-Constitucional-Exploration" target="_blank">political dynamics</a>. You can see the rest of my works clicking my <a href="https://github.com/aoliveram" target="_blank">GitHub profile</a>.
       </p>
       
-      <!-- TU SECCIÓN DE PUBLICACIONES -->
+      <!-- ======================================================= -->
+      <!-- ==============     CV y MAIL      ============== -->
+      <!-- ======================================================= -->
       <p class="bio">
-        My most recent works include "<a href="https://doi.org/10.1103/PhysRevA.106.013703" target="_blank">Dipole-dipole interactions through a lens</a>" published in Physical Review A, and the ongoing development of the R package "<a href="https://github.com/USCCANA/netdiffuseR" target="_blank">netdiffuseR</a>" for analyzing diffusion processes on networks.
+        Latest CV <a href="assets/CV_Aníbal_Olivera_2025-07_ENG.pdf" target="_blank"> here.</a><br>
+        Contact me at <a href="mailto:anibal.olivera.m@gmail.com">anibal.olivera.m@gmail.com</a>
       </p>
 
-    </div>
-
-    <!-- ENLACES DEL PIE DE PÁGINA -->
-    <div style="text-align: right;filter:grayscale(1);padding-bottom: 10px;padding-right: 10px;" class="container-fluid pr-2 pb-2 overflow-hidden">
-      Contact me at <a href="mailto:anibal.olivera.m@gmail.com">anibal.olivera.m@gmail.com</a><br>
-      Latest CV <a href="assets/CV_Aníbal_Olivera_2025-07_ENG.pdf" target="_blank"><i class="fas fa-id-badge"> </i> here.</a>
     </div>
 
   </div>
 </div>
 
-<!-- Script para activar los popovers de los íconos -->
+<!-- Script para activar los pequeños pop-ups que aparecen al pasar el mouse sobre los iconos -->
 <script>
 $(document).ready(function(){
   $('[data-toggle="popover"]').popover();   

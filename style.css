@@ -1,64 +1,50 @@
+/* ===================================================================== */
+/* =========         ESTILOS GENERALES Y LEGACY          =============== */
+/* ===================================================================== */
+
 body {
   font-family:  Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
+  /* Esta línea es necesaria para que el posicionamiento de la red funcione correctamente. */
+  position: relative; 
 }
 
-header {
-  color: rgb(300,300,300);
-  text-align:center;
-  text-shadow: 2px 2px 2px #9c9c9c;
-  font-weight: bold;
-  font-size:20pt;
-  padding: 2px;
-  background-position:left;
-  background-repeat:no-repeat;
-}
+/* ===================================================================== */
+/* =========   ESTILOS PRINCIPALES DE TU PÁGINA ACTUAL   =============== */
+/* ===================================================================== */
 
-footer {
-  background-color:white;
-  color:rgb(150,150,150);
-  font-size:10pt;
-  padding: 5px;
-  padding-bottom: 10px;
-  text-align: center;
-  border-top-style: solid;
-  border-top-color:rgb(200,200,200);
-  border-top-width: 4px;
-}
-
-/* Some general settings */
-b {color:#1e1e1e;}
-strong {color:#787878}
-
-nav {
-  line-height:30px;
-  background-color:gray;
-  height:30px;
-  color:white;
-  text-align:center;
-  border-radius: 50px;
-  box-shadow: 0 2px 1px #9c9c9c;
-  word-spacing: 30px;
-}
-
-section {
-  text-align: justify;
-  padding:10px;
-}
-
-pre {
-  background-color:rgb(194, 209, 224);
-  padding: inherit;
-  border-radius: 5px;
-  width: 90%;
-  margin: auto;
-  box-shadow: 0 2px 1px #9c9c9c;
-}
-
-/* Links style */
+/* --- ESTILO PARA TODOS LOS HIPERVÍNCULOS --- */
 a {
   text-decoration: none;
   font-weight: bolder;
-  color: Teal;
+  transition: color 0.2s ease-in-out; /* Añade una transición suave al cambiar de color */
+}
+
+/* --- ESTILO PARA LOS ICONOS SOCIALES --- */
+/* Esta regla es más específica y anulará a Bootstrap */
+.bio a .fab, .bio a .fas {
+  color: rgb(128, 0, 0); /* Tu color rojo oscuro */
+}
+
+/* --- ESTILO PARA LOS LINKS DE TEXTO (publicaciones, email, CV) --- */
+.bio a, .container-fluid a {
+  color: rgb(128, 0, 0); /* Tu color rojo oscuro */
+}
+
+/* --- EFECTO HOVER: CÓMO SE VERÁN AL PASAR EL MOUSE POR ENCIMA --- */
+/* Cambiamos el color a un rojo más brillante para dar feedback visual */
+.bio a:hover .fab, .bio a:hover .fas, .bio a:hover, .container-fluid a:hover {
+  color: rgb(204, 0, 0); /* Rojo brillante */
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Añadimos una sombra sutil */
+}
+
+/* --- ESTILO PARA LOS LINKS DE TEXTO DEL FOOTER (email, CV) --- */
+.footer-links a {
+  color: rgb(128, 0, 0) !important; /* Tu color rojo oscuro, ¡ahora con máxima prioridad! */
+}
+
+/* Y no olvidemos el efecto hover para estos links también */
+.footer-links a:hover {
+  color: rgb(204, 0, 0) !important; /* Rojo brillante, con máxima prioridad */
 }
 
 nav a:link {color: white;text-decoration: none}
@@ -66,15 +52,47 @@ nav a:visited {color: white;text-decoration: none}
 nav a:hover, a:hover {color: white; text-shadow: 0 2px 1px black;text-decoration: none}
 nav a:active {color: black;text-decoration: none}
 
-/* Header style */
+/* Estilo para los títulos */
 h2 {color:#1e1e1e; font-weight:lighter;}
 h3 {color:#1e1e1e; font-weight:lighter;}
 h4 {color:#1e1e1e; font-weight:lighter;}
 
+/* Define el ancho máximo del bloque de tu biografía y su espaciado izquierdo. */
+.bio {
+  max-width: 580px;
+  padding-left: 5%;
+}
+
+/* Estilo general para las imágenes. */
 img {
   display: block;
   width: auto;
-  max-width: 80%;
+  /* AJUSTA AQUÍ: Cambia el tamaño máximo por defecto de las imágenes. */
+  max-width: 100%;
   margin: auto;
   padding: 10px;
+}
+
+/* ===================================================================== */
+/* =========       ESTILOS PARA LA RED EN LA ESQUINA      ============== */
+/* ===================================================================== */
+
+/* Este bloque posiciona el contenedor de la red en la esquina superior derecha. */
+.network-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  z-index: 10; /* Se asegura que esté por encima de otros elementos. */
+}
+
+/* Este bloque da estilo a la imagen de la red en sí. */
+.network-svg {
+  width: 100%;
+  /* AJUSTA AQUÍ: Cambia '350px' para hacer la red más grande o más pequeña. */
+  max-width: 400px;
+  min-width: 100px;
+  /* AJUSTA AQUÍ: Cambia '0.6' (60%) para hacerla más o menos transparente. */
+  opacity: 0.5;
+  /* AJUSTA AQUÍ: Cambia los valores para modificar la sombra. */
+  filter: drop-shadow(2px 2px 2px #444); 
 }
