@@ -5,7 +5,17 @@
 body {
   font-family:  Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
   /* Esta línea es necesaria para que el posicionamiento de la red funcione correctamente. */
-  position: relative; 
+  position: relative;
+  /* Reduce el tamaño de la foto de fondo .jpeg */
+  /* background-size acepta varios valores separados por coma, uno por cada capa de fondo en background-image. */
+  /* En este caso:
+    - El primer valor (35% auto) es para la foto .jpeg: ocupa el 35% del ancho del body, altura automática.
+    - El segundo valor (50% 100%) es para el degradado: ocupa el 50% del ancho y el 100% de la altura.
+    El orden de los valores corresponde al orden de las capas en background-image.
+  */
+  /* NOT WORKING*/
+  background-size: 300px auto, 50% 100%;
+  background-position: 85% top, left top;
 }
 
 /* ===================================================================== */
@@ -59,8 +69,8 @@ h4 {color:#1e1e1e; font-weight:lighter;}
 
 /* Define el ancho máximo del bloque de tu biografía y su espaciado izquierdo. */
 .bio {
-  max-width: 580px;
-  padding-left: 5%;
+  max-width: 650px; /* más ancho, puedes ajustar a tu gusto */
+  padding-left: 3%;  /* menos margen izquierdo, puedes poner 0 si quieres que pegue al borde */
 }
 
 /* Estilo general para las imágenes. */
@@ -89,17 +99,17 @@ img {
 .network-svg {
   width: 100%;
   /* AJUSTA AQUÍ: Cambia '350px' para hacer la red más grande o más pequeña. */
-  max-width: 400px;
+  max-width: 440px;
   min-width: 100px;
   /* AJUSTA AQUÍ: Cambia '0.6' (60%) para hacerla más o menos transparente. */
-  opacity: 0.5;
+  opacity: 0.45;
   /* AJUSTA AQUÍ: Cambia los valores para modificar la sombra. */
   filter: drop-shadow(2px 2px 2px #444); 
 }
 
 /* Hero: controla la separación vertical del bloque principal */
 .hero {
-  padding-top: 12vh;    /* sube/baja el bloque según la altura de la ventana */
+  padding-top: 11vh;    /* sube/baja el bloque según la altura de la ventana */
   padding-bottom: 50px; /* conserva tu espacio inferior actual */
 }
 
