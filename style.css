@@ -96,3 +96,16 @@ img {
   /* AJUSTA AQUÍ: Cambia los valores para modificar la sombra. */
   filter: drop-shadow(2px 2px 2px #444); 
 }
+
+/* Hero: controla la separación vertical del bloque principal */
+.hero {
+  padding-top: 12vh;    /* sube/baja el bloque según la altura de la ventana */
+  padding-bottom: 50px; /* conserva tu espacio inferior actual */
+}
+
+/* Ajustes para pantallas pequeñas */
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 6vh;   /* menos espacio en móviles para que no quede demasiado abajo */
+  }
+}
