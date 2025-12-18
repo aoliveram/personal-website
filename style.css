@@ -1,121 +1,187 @@
 /* ===================================================================== */
-/* =========         ESTILOS GENERALES Y LEGACY          =============== */
+/* =========         ESTILOS GENERALES Y RESET           =============== */
 /* ===================================================================== */
 
-body {
-  font-family:  Trebuchet MS,Lucida Grande,Lucida Sans Unicode,Lucida Sans,Tahoma,sans-serif;
-  /* Esta línea es necesaria para que el posicionamiento de la red funcione correctamente. */
-  position: relative;
-  /* Reduce el tamaño de la foto de fondo .jpeg */
-  /* background-size acepta varios valores separados por coma, uno por cada capa de fondo en background-image. */
-  /* En este caso:
-    - El primer valor (35% auto) es para la foto .jpeg: ocupa el 35% del ancho del body, altura automática.
-    - El segundo valor (50% 100%) es para el degradado: ocupa el 50% del ancho y el 100% de la altura.
-    El orden de los valores corresponde al orden de las capas en background-image.
-  */
-  /* NOT WORKING*/
-  background-size: 300px auto, 50% 100%;
-  background-position: 85% top, left top;
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: 'Jost', 'Trebuchet MS', sans-serif;
+  color: #1e1e1e;
 }
 
 /* ===================================================================== */
-/* =========   ESTILOS PRINCIPALES DE TU PÁGINA ACTUAL   =============== */
+/* =========            LAYOUT PRINCIPAL (GRID)          =============== */
 /* ===================================================================== */
 
-/* --- ESTILO PARA TODOS LOS HIPERVÍNCULOS --- */
-a {
+.main-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Dos columnas iguales en escritorio */
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* --- SECCIÓN IZQUIERDA: CONTENIDO --- */
+.content-area {
+  background: linear-gradient(to right, #a8a7a7, #e2e2e2);
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* Centra verticalmente */
+  padding: 4rem;
+  overflow-y: auto; /* Permite scroll si el contenido es muy largo */
+}
+
+.content-inner {
+  max-width: 650px;
+  margin: 0 auto; /* Centra horizontalmente dentro del área */
+}
+
+/* --- SECCIÓN DERECHA: IMAGEN --- */
+.image-area {
+  background-image: url('assets/aoliveram_background.jpeg');
+  background-size: cover;
+  background-position: center center;
+  position: relative; /* Para posicionar la red absolutamente dentro */
+  min-height: 400px; /* Altura mínima para móviles */
+}
+
+/* ===================================================================== */
+/* =========            TIPOGRAFÍA Y ELEMENTOS           =============== */
+/* ===================================================================== */
+
+.bio-name {
+  font-weight: lighter;
+  color: #1e1e1e;
+  margin-bottom: 0.5rem;
+}
+
+.bio-title {
+  font-weight: 1000;
+  color: rgba(40, 40, 40, 1);
+  margin-bottom: 1.5rem;
+}
+
+.bio-text p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+/* --- REDES SOCIALES --- */
+.social-icons {
+  margin-bottom: 2rem;
+}
+
+.social-icons a {
+  margin-right: 15px;
   text-decoration: none;
+}
+
+.social-icons .fab, .social-icons .fas {
+  color: rgb(128, 0, 0);
+  transition: color 0.2s ease-in-out, text-shadow 0.2s ease-in-out;
+}
+
+.social-icons a:hover .fab, .social-icons a:hover .fas {
+  color: rgb(204, 0, 0);
+  text-shadow: 0 1px 2px rgba(0,0,0,0.5);
+}
+
+/* --- ENLACES DE TEXTO --- */
+a, .bio-text a {
+  color: rgb(128, 0, 0);
   font-weight: bolder;
-  transition: color 0.2s ease-in-out; /* Añade una transición suave al cambiar de color */
+  text-decoration: none;
+  transition: color 0.2s ease-in-out;
 }
 
-/* --- ESTILO PARA LOS ICONOS SOCIALES --- */
-/* Esta regla es más específica y anulará a Bootstrap */
-.bio a .fab, .bio a .fas {
-  color: rgb(128, 0, 0); /* Tu color rojo oscuro */
-}
-
-/* --- ESTILO PARA LOS LINKS DE TEXTO (publicaciones, email, CV) --- */
-.bio a, .container-fluid a {
-  color: rgb(128, 0, 0); /* Tu color rojo oscuro */
-}
-
-/* --- EFECTO HOVER: CÓMO SE VERÁN AL PASAR EL MOUSE POR ENCIMA --- */
-/* Cambiamos el color a un rojo más brillante para dar feedback visual */
-.bio a:hover .fab, .bio a:hover .fas, .bio a:hover, .container-fluid a:hover {
-  color: rgb(204, 0, 0); /* Rojo brillante */
-  text-shadow: 0 1px 2px rgba(0,0,0,0.5); /* Añadimos una sombra sutil */
-}
-
-/* --- ESTILO PARA LOS LINKS DE TEXTO DEL FOOTER (email, CV) --- */
-.footer-links a {
-  color: rgb(128, 0, 0) !important; /* Tu color rojo oscuro, ¡ahora con máxima prioridad! */
-}
-
-/* Y no olvidemos el efecto hover para estos links también */
-.footer-links a:hover {
-  color: rgb(204, 0, 0) !important; /* Rojo brillante, con máxima prioridad */
-}
-
-nav a:link {color: white;text-decoration: none}
-nav a:visited {color: white;text-decoration: none}
-nav a:hover, a:hover {color: white; text-shadow: 0 2px 1px black;text-decoration: none}
-nav a:active {color: black;text-decoration: none}
-
-/* Estilo para los títulos */
-h2 {color:#1e1e1e; font-weight:lighter;}
-h3 {color:#1e1e1e; font-weight:lighter;}
-h4 {color:#1e1e1e; font-weight:lighter;}
-
-/* Define el ancho máximo del bloque de tu biografía y su espaciado izquierdo. */
-.bio {
-  max-width: 650px; /* más ancho, puedes ajustar a tu gusto */
-  padding-left: 3%;  /* menos margen izquierdo, puedes poner 0 si quieres que pegue al borde */
-}
-
-/* Estilo general para las imágenes. */
-img {
-  display: block;
-  width: auto;
-  /* AJUSTA AQUÍ: Cambia el tamaño máximo por defecto de las imágenes. */
-  max-width: 100%;
-  margin: auto;
-  padding: 10px;
+a:hover, .bio-text a:hover {
+  color: rgb(204, 0, 0);
+  text-decoration: none; /* Bootstrap a veces añade subrayado */
 }
 
 /* ===================================================================== */
-/* =========       ESTILOS PARA LA RED EN LA ESQUINA      ============== */
+/* =========            LA RED (NETWORK SVG)             =============== */
 /* ===================================================================== */
 
-/* Este bloque posiciona el contenedor de la red en la esquina superior derecha. */
 .network-container {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  z-index: 10; /* Se asegura que esté por encima de otros elementos. */
+  top: 20px;
+  right: 20px;
+  width: 60%; /* Porcentaje del ancho de la columna de imagen */
+  max-width: 450px;
+  pointer-events: none; /* Permite hacer clic a través de la red si fuera necesario */
 }
 
-/* Este bloque da estilo a la imagen de la red en sí. */
 .network-svg {
   width: 100%;
-  /* AJUSTA AQUÍ: Cambia '350px' para hacer la red más grande o más pequeña. */
-  max-width: 440px;
-  min-width: 100px;
-  /* AJUSTA AQUÍ: Cambia '0.6' (60%) para hacerla más o menos transparente. */
+  height: auto;
   opacity: 0.45;
-  /* AJUSTA AQUÍ: Cambia los valores para modificar la sombra. */
-  filter: drop-shadow(2px 2px 2px #444); 
+  filter: drop-shadow(2px 2px 2px #444);
 }
 
-/* Hero: controla la separación vertical del bloque principal */
-.hero {
-  padding-top: 11vh;    /* sube/baja el bloque según la altura de la ventana */
-  padding-bottom: 50px; /* conserva tu espacio inferior actual */
+/* ===================================================================== */
+/* =========            RESPONSIVIDAD (MÓVIL)            =============== */
+/* ===================================================================== */
+
+@media (max-width: 992px) {
+  .main-wrapper {
+    grid-template-columns: 1fr; /* Una sola columna */
+    grid-template-rows: auto 1fr; /* La imagen es auto, el texto ocupa el resto */
+  }
+
+  /* En móvil, ponemos la imagen arriba y el texto abajo */
+  .image-area {
+    order: -1; /* Mueve la imagen al principio */
+    height: 60vh; /* Más altura para mostrar más cuerpo */
+    min-height: 400px;
+    background-position: center top; /* Alineado arriba para asegurar que se vea la cabeza */
+  }
+
+  .content-area {
+    padding: 2.5rem; /* Un poco más de espacio */
+  }
+
+  /* Aumentamos el tamaño del texto en móvil */
+  .bio-text p {
+    font-size: 1.25rem; /* Texto más grande */
+    line-height: 1.7;
+  }
+
+  .bio-name {
+    font-size: 2.5rem;
+  }
+
+  .bio-title {
+    font-size: 1.4rem;
+  }
+  
+  .network-container {
+    width: 40%; /* Más pequeña en móvil */
+    max-width: 200px;
+  }
 }
 
-/* Ajustes para pantallas pequeñas */
-@media (max-width: 768px) {
-  .hero {
-    padding-top: 6vh;   /* menos espacio en móviles para que no quede demasiado abajo */
+@media (max-width: 576px) {
+  .content-area {
+    padding: 1.5rem;
+  }
+  
+  .bio-name {
+    font-size: 1.8rem;
+  }
+  
+  .bio-title {
+    font-size: 1.2rem;
+  }
+  
+  .network-container {
+    width: 30%;
+    right: 10px;
+    top: 10px;
   }
 }
