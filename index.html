@@ -1,91 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- ======================================================= -->
-  <!-- ==============         CONFIGURACIÓN          ========= -->
-  <!-- ======================================================= -->
+  <meta charset="utf-8">
+  <!-- Critical for mobile: without this the page renders at desktop width and looks tiny -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Título que aparece en la pestaña del navegador -->
   <title>Aníbal Olivera M.</title>
 
-  <!-- Librerías externas que dan funcionalidades y estilos base (Bootstrap, jQuery, FontAwesome para los iconos) -->
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <link href='https://fonts.googleapis.com/css?family=Jost' rel='stylesheet'>
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-  <script src="https://kit.fontawesome.com/f1f87a298c.js" crossorigin="anonymous"></script>
+  <!-- Inconsolata: monospace / "industrial" typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap" rel="stylesheet">
 
-  <!-- Enlace a tu hoja de estilos. Asegúrate que el archivo 'style.css' esté en la misma carpeta. -->
-  <!-- Agregamos ?v=1.0 para forzar al navegador a recargar los estilos y no usar la memoria caché antigua -->
-  <link rel="stylesheet" href="style.css?v=1.1">
+  <!-- Font Awesome (free) for the social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
 
+  <link rel="stylesheet" href="style.css?v=2.0">
 </head>
 
-<body class="home-body">
+<body>
 
-<!-- ======================================================= -->
-<!-- ==============      LAYOUT PRINCIPAL       ============ -->
-<!-- ======================================================= -->
+  <!-- Thin red accent bar across the top -->
+  <div class="topbar"></div>
 
-<div class="main-wrapper">
-  
-  <!-- SECCIÓN IZQUIERDA: CONTENIDO (TEXTO) -->
-  <section class="content-area">
-    <div class="content-inner">
-      
-      <!-- TU NOMBRE Y TÍTULO -->
-      <h2 class="bio-name">Aníbal Olivera Morales</h2>
-      <h4 class="bio-title">Ph.D. candidate in Social Complexity Science</h4>
-      
-      <!-- REDES SOCIALES -->
-      <div class="social-icons">
-        <a data-toggle="popover" data-trigger="hover" data-content="Check out my code on GitHub" href="https://github.com/aoliveram" target="_blank"><i class="fab fa-github fa-3x"> </i></a>
-        <a data-toggle="popover" data-trigger="hover" data-content="My ORCID profile" href="https://orcid.org/0009-0000-3736-7939" target="_blank"><i class="fab fa-orcid fa-3x"> </i></a>
-        <a data-toggle="popover" data-trigger="hover" data-content="My Google Scholar Profile" href="https://scholar.google.com/citations?user=ryxzohUAAAAJ&hl=es" target="_blank"><i class="fas fa-graduation-cap fa-3x"> </i></a>
-        <a data-toggle="popover" data-trigger="hover" data-content="My presentations" href="https://github.com/aoliveram/Presentations/blob/main/README.md" target="_blank"><i class="fas fa-chalkboard-teacher fa-3x"> </i></a>
+  <!-- Subtle network graphic (thematic watermark, desktop only) -->
+  <img src="assets/ukfaculty.svg" class="network-bg" alt="" aria-hidden="true">
+
+  <main class="page">
+
+    <!-- HEADER: photo + name + title + social -->
+    <header class="intro">
+      <img class="avatar" src="assets/aoliveram_background_square.jpeg" alt="Aníbal Olivera Morales">
+      <div class="intro-text">
+        <h1 class="name">Aníbal Olivera Morales</h1>
+        <p class="title">Ph.D. candidate in Social Complexity Science</p>
+
+        <nav class="social">
+          <a href="https://github.com/aoliveram" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="https://orcid.org/0009-0000-3736-7939" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
+          <a href="https://scholar.google.com/citations?user=ryxzohUAAAAJ&hl=es" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+          <a href="https://github.com/aoliveram/Presentations/blob/main/README.md" target="_blank" rel="noopener" title="Talks &amp; presentations" aria-label="Talks and presentations"><i class="fa-solid fa-chalkboard-user"></i></a>
+        </nav>
       </div>
+    </header>
 
-      <!-- BIOGRAFÍA -->
-      <div class="bio-text">
-        <p>
-          I am a <strong>Ph.D. candidate</strong> at the <a href="https://gobierno.udd.cl/doctorado/" target="_blank">Research Center for Social Complexity</a> (<em>CICS</em>), where my research explores social contagion and diffusion processes in networks using <strong>computational and quantitative approaches</strong>.
-        </p>
-        <p>
-          With a background in Physics [<a href="https://doi.org/10.1103/PhysRevA.106.013703" target="_blank">1</a>, <a href="assets/BEC_broken_symmetry_Arxiv_V1.pdf" target="_blank">2</a>, <a href="assets/Tópicos_II_Aníbal_BKT.pdf" target="_blank">3</a>] (B.Sc. 2020, M.Sc. 2022, <em>UdeC</em>), my work bridges <strong>theoretical modeling</strong> and <strong>empirical applications</strong>—from <a href="https://github.com/aoliveram/Presentations/blob/main/20241027-css-americas/Network-Structure-ABM-Poster.pdf" target="_blank">epidemiological simulations</a> to the study of <a href="https://github.com/aoliveram/Presentations/blob/main/20251023-policics-2/Networks-Decide-for-Us.pdf" target="_blank">social influence</a>.
-        </p>
-        <p>
-          I co-develop <strong>open-source tools</strong> for network analysis, including the R package <a href="https://cran.r-project.org/web/packages/netdiffuseR/index.html" target="_blank">netdiffuseR</a>, and I have co-led <a href="https://usccana.github.io/netdiffuser-workshop/" target="_blank">workshops</a> on its use at <strong>Sunbelt</strong> conference.
-        </p>
-        <p>
-          My current projects, funded by ANID (FONDECYT), applies network models—such as <strong>Ising models</strong>—to <a href="https://github.com/aoliveram/Proyecto-Carceles-Ising" target="_blank">recidivism risk</a> among incarcerated populations and runs analyses of <a href="https://github.com/aoliveram/Convencion-Constitucional-Exploration" target="_blank">political dynamics</a> in the Chilean Constitutional Convention.
-        </p>
-        <p>
-          I am also interested in <strong>teaching</strong>, ranging from <strong>graduate-level courses</strong> —such as <a href="https://github.com/aoliveram/Redes-Sociales-2025" target="_blank">SNA</a> and <a href="https://github.com/aoliveram/Economia-Politica-Formal-2025" target="_blank">FPE</a>— to the development of curricular materials in <a href="https://github.com/aoliveram/Fisica-para-Mates" target="_blank">Mathematics and Physics</a> for undergraduate education.
-        </p>
-        <p>
-          You can find my code and projects on <a href="https://github.com/aoliveram/" target="_blank">GitHub</a>, contact me at <a href="mailto:anibal.olivera.m@gmail.com">anibal.olivera.m@gmail.com</a>, or download my <strong>latest CV </strong> (<a href="assets/CV_Anibal_Olivera_2026-06_ENG.pdf" target="_blank">ENG</a>)(<a href="assets/CV_Anibal_Olivera_2026-06_ESP.pdf" target="_blank">ESP</a>).
-        </p>
-      </div>
+    <hr class="rule">
 
-    </div>
-  </section>
+    <!-- BIO -->
+    <section class="bio">
+      <p>
+        I am a <strong>Ph.D. candidate</strong> at the <a href="https://gobierno.udd.cl/doctorado/" target="_blank" rel="noopener">Research Center for Social Complexity</a> (<em>CICS</em>), where my research explores social contagion and diffusion processes in networks using <strong>computational and quantitative approaches</strong>.
+      </p>
+      <p>
+        With a background in Physics [<a href="https://doi.org/10.1103/PhysRevA.106.013703" target="_blank" rel="noopener">1</a>, <a href="assets/BEC_broken_symmetry_Arxiv_V1.pdf" target="_blank" rel="noopener">2</a>, <a href="assets/Tópicos_II_Aníbal_BKT.pdf" target="_blank" rel="noopener">3</a>] (B.Sc. 2020, M.Sc. 2022, <em>UdeC</em>), my work bridges <strong>theoretical modeling</strong> and <strong>empirical applications</strong>—from <a href="https://github.com/aoliveram/Presentations/blob/main/20241027-css-americas/Network-Structure-ABM-Poster.pdf" target="_blank" rel="noopener">epidemiological simulations</a> to the study of <a href="https://github.com/aoliveram/Presentations/blob/main/20251023-policics-2/Networks-Decide-for-Us.pdf" target="_blank" rel="noopener">social influence</a>.
+      </p>
+      <p>
+        I co-develop <strong>open-source tools</strong> for network analysis, including the R package <a href="https://cran.r-project.org/web/packages/netdiffuseR/index.html" target="_blank" rel="noopener">netdiffuseR</a>, and I have co-led <a href="https://usccana.github.io/netdiffuser-workshop/" target="_blank" rel="noopener">workshops</a> on its use at <strong>Sunbelt</strong> conference. I am currently a <strong>visiting researcher</strong> at the <strong>University of Southern California</strong>, working with Thomas W. Valente on the <a href="https://github.com/aoliveram/Network-Disadoption" target="_blank" rel="noopener">disadoption of behaviors</a> in social networks—a study recently submitted to <strong>PNAS</strong>.
+      </p>
+      <p>
+        My current projects, funded by ANID (FONDECYT), apply network models—such as <strong>Ising models</strong>—to <a href="https://github.com/aoliveram/Proyecto-Carceles-Ising" target="_blank" rel="noopener">recidivism risk</a> among incarcerated populations and run analyses of <a href="https://github.com/aoliveram/Convencion-Constitucional-Exploration" target="_blank" rel="noopener">political dynamics</a> in the Chilean Constitutional Convention.
+      </p>
+      <p>
+        I am also interested in <strong>teaching</strong>, ranging from <strong>graduate-level courses</strong> —such as <a href="https://github.com/aoliveram/Redes-Sociales-2025" target="_blank" rel="noopener">SNA</a> and <a href="https://github.com/aoliveram/Economia-Politica-Formal-2025" target="_blank" rel="noopener">FPE</a>— to the development of curricular materials in <a href="https://github.com/aoliveram/Fisica-para-Mates" target="_blank" rel="noopener">Mathematics and Physics</a> for undergraduate education.
+      </p>
+      <p>
+        You can find my code and projects on <a href="https://github.com/aoliveram/" target="_blank" rel="noopener">GitHub</a>, or contact me at <a href="mailto:anibal.olivera.m@gmail.com">anibal.olivera.m@gmail.com</a>.
+      </p>
 
-  <!-- SECCIÓN DERECHA: IMAGEN Y RED -->
-  <section class="image-area">
-    <div class="network-container">
-      <img src="assets/ukfaculty.svg" class="network-svg" alt="Network Graph">
-    </div>
-  </section>
+      <p class="cv">
+        <span class="cv-label">Curriculum Vitae</span>
+        <a class="btn" href="assets/CV_Anibal_Olivera_2026-06_ENG.pdf" target="_blank" rel="noopener">ENG</a>
+        <a class="btn" href="assets/CV_Anibal_Olivera_2026-06_ESP.pdf" target="_blank" rel="noopener">ESP</a>
+      </p>
+    </section>
 
-</div>
-
-<!-- Script para activar los pequeños pop-ups que aparecen al pasar el mouse sobre los iconos -->
-<script>
-$(document).ready(function(){
-  $('[data-toggle="popover"]').popover();   
-});
-</script>
+  </main>
 
 </body>
 </html>
