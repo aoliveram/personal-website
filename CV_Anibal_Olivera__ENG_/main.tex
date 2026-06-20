@@ -1,0 +1,29 @@
+% Definition of the class moderncv with some parameters. Font size 11pt, paper size A4, font sans
+\documentclass[11pt, a4paper, sans]{moderncv}
+
+% Includes all the necessary packages from packages.tex
+\input{Einstellungen/packages}
+
+% Defines commands and parameters for modifying the included packages
+\input{Einstellungen/commands}
+
+% Beginning of document
+\begin{document}
+    \pagestyle{empty}
+    
+    %Creates the CV title with Name and photo 
+    \myCVtitle{Aníbal Luciano}{Olivera Morales}{Abbildungen/Foto_carnet.jpeg}
+    
+    \input{Inhalt/1_Info_Personal}                % Personal information
+    \input{Inhalt/2_Estudios}                % Studies
+    \input{Inhalt/5_Reconocimientos}  % Further qualifications
+    \input{Inhalt/3_Experiencia_Laboral}        % Work experience
+    %\input{Inhalt/4_Ayudantias}               % Internships
+    \input{Inhalt/6_Intereses_Habilidades}             % Skills and interests
+    %\input{Inhalt/7_Statement_of_Need}                  % Extra information
+    
+    % Signature
+    %\sign{Max Mustermann}{Musterstadt}{Abbildungen/signature.jpg}
+
+\end{document}
+
