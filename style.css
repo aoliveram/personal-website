@@ -102,9 +102,16 @@ body {
   margin-right: 0.55rem;
 }
 
+/* ============ Actions row: social icons + CV buttons ============ */
+.actions-row {
+  margin-top: 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
 /* ===================== Social icons ===================== */
 .social {
-  margin-top: 1.1rem;
   display: flex;
   gap: 1.15rem;
   font-size: 1.5rem;
@@ -148,37 +155,31 @@ body {
 strong { font-weight: 700; }
 em { color: var(--muted); font-style: italic; }
 
-/* ===================== CV buttons (in header) ===================== */
+/* ===================== CV buttons (in header row) ===================== */
 .cv-actions {
-  margin-left: auto;          /* push to the right of the header */
-  align-self: flex-start;     /* sit at the top */
+  margin-left: auto;          /* push to the right of the icons row */
   display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  gap: 0.5rem;
-  text-align: right;
+  align-items: center;
+  gap: 0.4rem;
 }
 
 .cv-label {
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 0.8rem;
+  font-size: 0.72rem;
   color: var(--muted);
-}
-
-.cv-links {
-  display: flex;
-  gap: 0.5rem;
+  margin-right: 0.15rem;
 }
 
 .btn {
   display: inline-block;
-  padding: 0.3rem 1.05rem;
+  padding: 0.12rem 0.6rem;
   border: 1.5px solid var(--red);
   border-radius: 3px;
   color: var(--red);
   font-weight: 700;
+  font-size: 0.82rem;
   text-decoration: none;
   letter-spacing: 0.5px;
   transition: background 0.15s ease, color 0.15s ease;
@@ -219,14 +220,17 @@ em { color: var(--muted); font-style: italic; }
   .name { font-size: 1.75rem; }
   .title { font-size: 1rem; }
 
-  .social { justify-content: center; font-size: 1.6rem; gap: 1.4rem; }
+  .actions-row {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem 1.2rem;
+  }
+
+  .social { font-size: 1.6rem; gap: 1.4rem; }
 
   .rule { margin: 2rem 0; }
 
   .cv-actions {
     margin-left: 0;
-    align-self: center;
-    align-items: center;
-    text-align: center;
   }
 }
