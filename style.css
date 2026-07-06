@@ -148,22 +148,28 @@ body {
 strong { font-weight: 700; }
 em { color: var(--muted); font-style: italic; }
 
-/* ===================== CV buttons ===================== */
-.cv {
-  margin-top: 2rem !important;
+/* ===================== CV buttons (in header) ===================== */
+.cv-actions {
+  margin-left: auto;          /* push to the right of the header */
+  align-self: flex-start;     /* sit at the top */
   display: flex;
-  align-items: center;
-  gap: 0.6rem;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.5rem;
+  text-align: right;
 }
 
 .cv-label {
   font-weight: 700;
   letter-spacing: 0.5px;
   text-transform: uppercase;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: var(--muted);
-  margin-right: 0.3rem;
+}
+
+.cv-links {
+  display: flex;
+  gap: 0.5rem;
 }
 
 .btn {
@@ -217,5 +223,10 @@ em { color: var(--muted); font-style: italic; }
 
   .rule { margin: 2rem 0; }
 
-  .cv { justify-content: center; }
+  .cv-actions {
+    margin-left: 0;
+    align-self: center;
+    align-items: center;
+    text-align: center;
+  }
 }
