@@ -1,1 +1,11 @@
 .DS_Store
+
+# CV source folders: track only the compiled PDF (main.pdf); ignore
+# everything else (LaTeX sources, build artifacts, images, etc.)
+CV_Anibal_Olivera__ENG_/*
+!CV_Anibal_Olivera__ENG_/main.pdf
+CV_Anibal_Olivera__ESP_/*
+!CV_Anibal_Olivera__ESP_/main.pdf
+
+# Archived previous CV PDFs (kept locally, not versioned)
+old-cv/
