@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <!-- Critical for mobile: without this the page renders at desktop width and looks tiny -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Teaching · Aníbal Olivera M.</title>
+
+  <!-- Inconsolata: monospace / "industrial" typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@400;500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome (free) for the social icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+  <link rel="stylesheet" href="style.css?v=2.1">
+</head>
+
+<body>
+
+  <!-- Thin red accent bar across the top -->
+  <div class="topbar"></div>
+
+  <!-- Subtle network graphic (thematic watermark, desktop only) -->
+  <img src="assets/ukfaculty.svg" class="network-bg" alt="" aria-hidden="true">
+
+  <main class="page">
+
+    <!-- HEADER: photo + name + title + social -->
+    <header class="intro">
+      <img class="avatar" src="assets/aoliveram_background_square.jpeg" alt="Aníbal Olivera Morales">
+      <div class="intro-text">
+        <h1 class="name">Aníbal Olivera Morales</h1>
+        <p class="title">Ph.D. candidate in Social Complexity Science</p>
+
+        <div class="actions-row">
+          <nav class="social">
+            <a href="https://github.com/aoliveram" target="_blank" rel="noopener" title="GitHub" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://orcid.org/0009-0000-3736-7939" target="_blank" rel="noopener" title="ORCID" aria-label="ORCID"><i class="fa-brands fa-orcid"></i></a>
+            <a href="https://scholar.google.com/citations?user=ryxzohUAAAAJ&hl=es" target="_blank" rel="noopener" title="Google Scholar" aria-label="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+            <a href="https://github.com/aoliveram/Presentations/blob/main/README.md" target="_blank" rel="noopener" title="Talks &amp; presentations" aria-label="Talks and presentations"><i class="fa-solid fa-chalkboard-user"></i></a>
+          </nav>
+
+          <div class="cv-actions">
+            <span class="cv-label">CV</span>
+            <a class="btn" href="CV_Anibal_Olivera__ENG_/main.pdf" target="_blank" rel="noopener">ENG</a>
+            <a class="btn" href="CV_Anibal_Olivera__ESP_/main.pdf" target="_blank" rel="noopener">ESP</a>
+          </div>
+        </div>
+
+        <!-- Page tabs: same header on every page, active tab in red -->
+        <nav class="tabs" aria-label="Sections">
+          <a class="tab" href="index.html">About me</a>
+          <a class="tab is-active" href="teaching.html" aria-current="page">Teaching</a>
+        </nav>
+      </div>
+    </header>
+
+    <hr class="rule">
+
+    <!-- TEACHING -->
+    <section class="teaching">
+
+      <h2 class="section-title" id="workshops">Workshops</h2>
+      <ul class="teach-list">
+        <li>
+          <a class="teach-title" href="https://github.com/USCCANA/netdiffuser-workshop" target="_blank" rel="noopener">Understanding Diffusion with netdiffuseR</a>
+          <span class="teach-meta">Instructor · Sunbelt 2026 (INSNA), Daytona Beach, FL, USA</span>
+        </li>
+        <li>
+          <a class="teach-title" href="https://usccana.github.io/netdiffuser-workshop/" target="_blank" rel="noopener">Understanding Diffusion with netdiffuseR</a>
+          <span class="teach-meta">Instructor · Sunbelt 2025 (INSNA), Paris, France</span>
+        </li>
+        <li>
+          <a class="teach-title" href="https://policics.github.io/revisiting-surveys-workshop/0-index.html" target="_blank" rel="noopener">Revisiting Surveys: A view from Complexity Sciences</a>
+          <span class="teach-meta">Instructor · Summer School in Complex Systems 2026, Santiago, Chile</span>
+        </li>
+        <li>
+          <a class="teach-title" href="https://github.com/USCCANA/netdiffuser-workshop/releases/tag/USC2024" target="_blank" rel="noopener">netdiffuseR Workshop</a>
+          <span class="teach-meta">Instructor · Center for Applied Network Analysis, University of Southern California, 2024</span>
+        </li>
+      </ul>
+
+      <h2 class="section-title" id="courses">Graduate courses</h2>
+      <p class="section-note">Ph.D. in Social Complexity Science, Research Center for Social Complexity (<em>CICS</em>), Universidad del Desarrollo.</p>
+      <ul class="teach-list">
+        <li>
+          <a class="teach-title" href="https://aoliveram.github.io/Redes-Sociales-2026/" target="_blank" rel="noopener">Network Theory 2026</a>
+          <span class="teach-meta">Teaching Assistant · Lead instructor: Prof. Jorge Fábrega · Aug–Sep 2026</span>
+          <span class="teach-meta">Course book with the applied sessions, in R.</span>
+        </li>
+        <li>
+          <a class="teach-title" href="https://github.com/aoliveram/Redes-Sociales-2025" target="_blank" rel="noopener">Network Theory 2025</a>
+          <span class="teach-meta">Teaching Assistant · Lead instructor: Prof. Jorge Fábrega · Jul–Sep 2025</span>
+          <span class="teach-meta">GitHub repository.</span>
+        </li>
+        <li>
+          <a class="teach-title" href="https://github.com/aoliveram/Economia-Politica-Formal-2025" target="_blank" rel="noopener">Formal Political Economy 2025</a>
+          <span class="teach-meta">Teaching Assistant · Lead instructor: Prof. Jorge Fábrega · Oct–Dec 2025</span>
+          <span class="teach-meta">GitHub repository.</span>
+          <span class="soon">Course materials not yet available online!</span>
+        </li>
+        <li>
+          <span class="teach-title">Doctoral leveling courses in Mathematics</span>
+          <span class="teach-meta">Instructor · 2024, 2025, 2026</span>
+          <span class="soon">Not yet available online!</span>
+        </li>
+      </ul>
+
+      <h2 class="section-title" id="materials">Curricular materials</h2>
+      <ul class="teach-list">
+        <li>
+          <a class="teach-title" href="https://github.com/aoliveram/Fisica-para-Mates" target="_blank" rel="noopener">Física para Mates</a>
+          <span class="teach-meta">Mathematics and Physics materials for undergraduate Engineering, Universidad del Desarrollo</span>
+        </li>
+      </ul>
+
+    </section>
+
+  </main>
+
+</body>
+</html>

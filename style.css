@@ -127,6 +127,32 @@ body {
   transform: translateY(-2px);
 }
 
+/* ===================== Page tabs ===================== */
+.tabs {
+  margin-top: 1.1rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.tab {
+  color: var(--muted);
+  font-weight: 700;
+  font-size: 0.85rem;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding-bottom: 0.15rem;
+  border-bottom: 2px solid transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.tab:hover { color: var(--ink); }
+
+.tab.is-active {
+  color: var(--red);
+  border-bottom-color: var(--red);
+}
+
 /* ===================== Divider ===================== */
 .rule {
   border: 0;
@@ -139,7 +165,8 @@ body {
   margin: 0 0 1.15rem;
 }
 
-.bio a {
+.bio a,
+.teaching a {
   color: var(--red);
   font-weight: 700;
   text-decoration: none;
@@ -147,13 +174,70 @@ body {
   transition: color 0.15s ease, border-color 0.15s ease;
 }
 
-.bio a:hover {
+.bio a:hover,
+.teaching a:hover {
   color: var(--red-dark);
   border-bottom-color: var(--red-dark);
 }
 
 strong { font-weight: 700; }
 em { color: var(--muted); font-style: italic; }
+
+/* ===================== Teaching page ===================== */
+.section-title {
+  margin: 0 0 0.9rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+/* same red tick as the subtitle */
+.section-title::before {
+  content: "";
+  display: inline-block;
+  width: 22px;
+  height: 3px;
+  background: var(--red);
+  vertical-align: middle;
+  margin-right: 0.55rem;
+}
+
+.section-note {
+  margin: -0.4rem 0 1rem;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+.teach-list {
+  list-style: none;
+  margin: 0 0 2.4rem;
+  padding: 0;
+}
+
+.teach-list li { margin: 0 0 1.1rem; }
+
+.teach-title {
+  display: inline-block;
+  font-weight: 700;
+}
+
+.teach-meta {
+  display: block;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.5;
+}
+
+/* notice for materials that are not online yet */
+.soon {
+  display: inline-block;
+  margin-top: 0.3rem;
+  padding: 0 0.5rem;
+  border: 1px dashed var(--muted);
+  border-radius: 3px;
+  color: var(--muted);
+  font-size: 0.78rem;
+  letter-spacing: 0.3px;
+}
 
 /* ===================== CV buttons (in header row) ===================== */
 .cv-actions {
@@ -233,4 +317,6 @@ em { color: var(--muted); font-style: italic; }
   .cv-actions {
     margin-left: 0;
   }
+
+  .tabs { justify-content: center; }
 }
